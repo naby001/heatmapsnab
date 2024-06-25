@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive 3x3 Matrix Heatmap</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <video autoplay muted loop id="background-video">
+      <source src="vid.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+  </video>
+  <div id="content-box" >
+    <header>
+        <h1>Click to increase value</h1>
+    </header>
+    <div id="heatmap-container">
+        <div id="interactive-heatmap">
+            <h3>Interactive Heatmap</h3>
+            <table id="heatmap">
+                <tr>
+                    <td data-value="0"><span>0</span></td>
+                    <td data-value="0"><span>0</span></td>
+                    <td data-value="0"><span>0</span></td>
+                </tr>
+                <tr>
+                    <td data-value="0"><span>0</span></td>
+                    <td data-value="0"><span>0</span></td>
+                    <td data-value="0"><span>0</span></td>
+                </tr>
+                <tr>
+                    <td data-value="0"><span>0</span></td>
+                    <td data-value="0"><span>0</span></td>
+                    <td data-value="0"><span>0</span></td>
+                </tr>
+            </table>
+            <button id="reset-button">Reset Heatmap</button>
+            <div id="tooltip" style="display: none;">Value: <span id="tooltip-value">0</span></div>
+        </div>
+        <div id="static-heatmap">
+            <h3>Static Heatmap</h3>
+            <table>
+                <tr>
+                    <td data-value="1"><span>1</span></td>
+                    <td data-value="2"><span>2</span></td>
+                    <td data-value="3"><span>3</span></td>
+                </tr>
+                <tr>
+                    <td data-value="4"><span>4</span></td>
+                    <td data-value="1"><span>1</span></td>
+                    <td data-value="2"><span>2</span></td>
+                </tr>
+                <tr>
+                    <td data-value="3"><span>3</span></td>
+                    <td data-value="4"><span>4</span></td>
+                    <td data-value="1"><span>1</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="legend">
+        <div class="legend-item"><div class="color-box" style="background-color: #ffffff;"></div> 0</div>
+        <div class="legend-item"><div class="color-box" style="background-color: #ffeda0;"></div> 1</div>
+        <div class="legend-item"><div class="color-box" style="background-color: #feb24c;"></div> 2</div>
+        <div class="legend-item"><div class="color-box" style="background-color: #f03b20;"></div> 3</div>
+        <div class="legend-item"><div class="color-box" style="background-color: #bd0026;"></div> 4</div>
+    </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Interactive Heatmap Eg. made by Nabyendu Das</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

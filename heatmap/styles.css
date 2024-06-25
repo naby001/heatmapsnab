@@ -1,0 +1,154 @@
+/* styles.css */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    margin-top: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#heatmap-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 80%;
+    margin: 20px 0;
+    gap: 50px;
+}
+
+#interactive-heatmap, #static-heatmap {
+    text-align: center;
+}
+
+#heatmap, #static-heatmap table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#heatmap td, #static-heatmap td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+#heatmap td {
+    cursor: pointer;
+}
+
+#heatmap td span, #static-heatmap td span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    color: #000; /* Ensure text is visible */
+}
+
+[data-value="0"] {
+    background-color: #ffffff;
+}
+
+[data-value="1"] {
+    background-color: #ffeda0;
+}
+
+[data-value="2"] {
+    background-color: #feb24c;
+}
+
+[data-value="3"] {
+    background-color: #f03b20;
+}
+
+[data-value="4"] {
+    background-color: #bd0026;
+}
+
+#reset-button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+#reset-button:hover {
+    background-color: #0056b3;
+}
+
+#tooltip {
+    z-index: 999;;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    pointer-events: none;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+#legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Ensure video is behind other content */
+}
+#content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
